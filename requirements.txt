@@ -1,0 +1,129 @@
+absl-py==2.3.1
+addict==2.4.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.2
+aiosignal==1.4.0
+aliyun-python-sdk-core==2.16.0
+aliyun-python-sdk-kms==2.16.5
+annotated-types==0.7.0
+anyio==4.12.1
+asc_opc_tool @ file:///root/selfgz96235205/compiler/lib64/asc_opc_tool-0.1.0-py3-none-any.whl#sha256=9873a1882932875dc651dac3294a738c7340c288070c4b89cf652ec93c1628b4
+async-timeout==5.0.1
+attrs==25.4.0
+auto_tune @ file:///root/selfgz96235205/compiler/lib64/auto_tune-0.1.0-py3-none-any.whl#sha256=276aad11a9fc0e06a1a77cbd82d2953ea987251758424d717d287708f4016b0d
+certifi==2025.11.12
+cffi==2.0.0
+charset-normalizer==3.4.4
+click==8.3.1
+cloudpickle==3.1.2
+crcmod==1.7
+cryptography==46.0.3
+dataflow @ file:///root/selfgz96235205/compiler/lib64/dataflow-0.0.1-py3-none-any.whl#sha256=e056c5beec9ce32ed2e5f66784af30b9e9ba251b08b41d7fb6554f2ddc0ef2d4
+datasets==3.3.2
+debugpy==1.8.19
+decorator==5.2.1
+dill==0.3.8
+einops==0.8.1
+exceptiongroup==1.3.1
+filelock==3.20.0
+frozenlist==1.8.0
+fsspec==2024.12.0
+gitdb==4.0.12
+GitPython==3.1.45
+gpytorch==1.14.3
+greenlet==3.3.0
+grpcio==1.76.0
+h11==0.16.0
+hccl @ file:///root/selfgz2712118142/hccl/lib64/hccl-0.1.0-py3-none-any.whl#sha256=4cc4d4519e1370486f691ab38b9267ea24cf007ce5853f67d1b922b06fb0f74d
+hccl_parser @ file:///usr/local/Ascend/ascend-toolkit/8.3.RC1/toolkit/tools/hccl_parser-0.1-py3-none-any.whl#sha256=e378185134d1d281536b36a9a8567092553d5c2bf1700ea53cc95b58ed5e646e
+hf-xet==1.2.0
+highspy==1.9.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface-hub==0.36.0
+idna==3.11
+iniconfig==2.3.0
+jaxtyping==0.3.3
+Jinja2==3.1.6
+jmespath==0.10.0
+joblib==1.5.2
+kagglehub==0.3.13
+linear-operator==0.6
+llm_datadist @ file:///root/selfgz96235205/compiler/lib64/llm_datadist-0.0.1-py3-none-any.whl#sha256=fb401ecb627245d9563c3bdde2da327bf1434ef5f033504b8422c92f397d18df
+llm_datadist_v1 @ file:///root/selfgz96235205/compiler/lib64/llm_datadist_v1-0.0.1-py3-none-any.whl#sha256=624abc40cf79eb1e9bb15cfff070ab8a0bf579afb473541282121af236d1ae18
+loguru==0.7.3
+Markdown==3.10
+MarkupSafe==3.0.3
+-e git+https://gitcode.com/ascend/MindSpeed.git@9f23c4b1ef1195e5c97e8521ad17dcd39ad8f953#egg=mindspeed
+mindspeed_llm==0.0.1
+ml_dtypes==0.5.4
+modelscope==1.33.0
+mpmath==1.3.0
+msobjdump @ file:///usr/local/Ascend/ascend-toolkit/8.3.RC1/toolkit/tools/msobjdump-0.1.0-py3-none-any.whl#sha256=140a42aeda76a7a64947e1668c0b9e4f1fbd0bc851cd8aa3488908a3a16e1d05
+multidict==6.7.0
+multiprocess==0.70.16
+networkx==3.4.2
+ninja==1.13.0
+numpy==1.26.0
+op_compile_tool @ file:///root/selfgz96235205/compiler/lib64/op_compile_tool-0.1.0-py3-none-any.whl#sha256=1e6287fdabd1dd4d39d7f4e6e86cc26335d75dab59443c74b9653bfa5cbcc702
+op_gen @ file:///usr/local/Ascend/ascend-toolkit/8.3.RC1/toolkit/tools/op_gen-0.1-py3-none-any.whl#sha256=b3e21ccc57b7d7249c5f1421a37e081ae40851209542e9a515b77c44d2e6568d
+op_test_frame @ file:///usr/local/Ascend/ascend-toolkit/8.3.RC1/toolkit/tools/op_test_frame-0.1-py3-none-any.whl#sha256=71df6227bb65464d7b47c855f17ee054700d88a04756b79b7f94c940d1b9ad4c
+opc_tool @ file:///root/selfgz96235205/compiler/lib64/opc_tool-0.1.0-py3-none-any.whl#sha256=04ea0138dc6c0ef62341395ffadcb8f123819b21b520f0ce743b5a283743fbe0
+oss2==2.19.1
+packaging==25.0
+pandas==2.3.3
+pillow==12.0.0
+platformdirs==4.5.1
+pluggy==1.6.0
+propcache==0.4.1
+protobuf==6.33.2
+psutil==7.1.3
+PuLP==3.0.0
+pyarrow==22.0.0
+pybind11==3.0.1
+pycparser==2.23
+pycryptodome==3.23.0
+pydantic==2.12.5
+pydantic_core==2.41.5
+Pygments==2.19.2
+pytest==9.0.2
+pytest-mock==3.15.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
+PyYAML==6.0.3
+regex==2025.11.3
+requests==2.32.5
+safetensors==0.7.0
+schedule_search @ file:///root/selfgz96235205/compiler/lib64/schedule_search-0.1.0-py3-none-any.whl#sha256=a6d657cc64ce2f4db12b85f67d8fec4862e54bc1d02e1b0fb04166e073503a50
+scikit-learn==1.7.2
+scipy==1.15.3
+sentencepiece==0.2.1
+sentry-sdk==2.47.0
+shellingham==1.5.4
+show_kernel_debug_data @ file:///usr/local/Ascend/ascend-toolkit/8.3.RC1/toolkit/tools/show_kernel_debug_data-0.1.0-py3-none-any.whl#sha256=7d1384b717aec1ce3410d7550e8fb5a9fbfdacef84126d796f65a0a0cce3eea9
+six==1.17.0
+smmap==5.0.2
+SQLAlchemy==2.0.44
+sympy==1.13.1
+te @ file:///root/selfgz96235205/compiler/lib64/te-0.4.0-py3-none-any.whl#sha256=2ef00a2c2c50269be2bc73b3979b6b38a47568e9af9710a95a95c7c1982f5eef
+tensorboard==2.20.0
+tensorboard-data-server==0.7.2
+threadpoolctl==3.6.0
+tiktoken==0.12.0
+tokenizers==0.20.3
+tomli==2.3.0
+torch==2.6.0
+torch_npu==2.6.0
+tornado==6.5.3
+tqdm==4.67.1
+transformers==4.46.3
+typer-slim==0.21.1
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.2
+urllib3==2.6.0
+wadler_lindig==0.1.7
+wandb==0.23.1
+Werkzeug==3.1.4
+xxhash==3.6.0
+yarl==1.22.0

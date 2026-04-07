@@ -1,0 +1,625 @@
+W0115 01:26:05.066000 2593754 site-packages/torch/distributed/run.py:792] 
+W0115 01:26:05.066000 2593754 site-packages/torch/distributed/run.py:792] *****************************************
+W0115 01:26:05.066000 2593754 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0115 01:26:05.066000 2593754 site-packages/torch/distributed/run.py:792] *****************************************
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:345: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+ERROR:bitsandbytes.cextension:Could not load bitsandbytes native library: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 123, in <module>
+    lib = get_native_library()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 102, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: cannot open shared object file: No such file or directory
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    Traceback (most recent call last):
+main()
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    pretrain(train_valid_test_datasets_provider,
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+Traceback (most recent call last):
+main()
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+        pretrain(train_valid_test_datasets_provider,    
+main()initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+Traceback (most recent call last):
+    Traceback (most recent call last):
+initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+      File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+result = fn(*args, **kwargs)pretrain(train_valid_test_datasets_provider,
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+        result = fn(*args, **kwargs)main()
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    main()assert torch.cuda.is_available(), "Megatron requires CUDA."
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+    Traceback (most recent call last):
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    Traceback (most recent call last):
+initialize_megatron(extra_args_provider=extra_args_provider,main()
+        assert torch.cuda.is_available(), "Megatron requires CUDA."Traceback (most recent call last):
+pretrain(train_valid_test_datasets_provider,
+AssertionError
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    pretrain(train_valid_test_datasets_provider,Traceback (most recent call last):
+main()Traceback (most recent call last):
+
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+: AssertionErrorMegatron requires CUDA.
+:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+Megatron requires CUDA.    
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+initialize_megatron(extra_args_provider=extra_args_provider,    
+Traceback (most recent call last):
+pretrain(train_valid_test_datasets_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+    
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    pretrain(train_valid_test_datasets_provider,    
+main()  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+
+    Traceback (most recent call last):
+main()    
+    Traceback (most recent call last):
+main()[ERROR] 2026-01-15-01:26:22 (PID:2593901, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+      File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpoancp3x8'>
+  _warnings.warn(warn_message, ResourceWarning)
+result = fn(*args, **kwargs)
+
+main()  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+    
+Traceback (most recent call last):
+initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+main()  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp2av8f26v'>
+  _warnings.warn(warn_message, ResourceWarning)
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+[ERROR] 2026-01-15-01:26:22 (PID:2593891, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+        assert torch.cuda.is_available(), "Megatron requires CUDA."
+main()AssertionError
+:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+Megatron requires CUDA.
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError        : result = fn(*args, **kwargs)initialize_megatron(extra_args_provider=extra_args_provider,Megatron requires CUDA.
+
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+        pretrain(train_valid_test_datasets_provider,    pretrain(train_valid_test_datasets_provider,result = fn(*args, **kwargs)
+
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+        main()main()    
+
+pretrain(train_valid_test_datasets_provider,  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    pretrain(train_valid_test_datasets_provider,
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+pretrain(train_valid_test_datasets_provider,    
+    main()  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+pretrain(train_valid_test_datasets_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+        result = fn(*args, **kwargs)assert torch.cuda.is_available(), "Megatron requires CUDA."
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+AssertionError: Megatron requires CUDA.
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError:     Megatron requires CUDA.
+pretrain(train_valid_test_datasets_provider,    
+        initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+pretrain(train_valid_test_datasets_provider,initialize_megatron(extra_args_provider=extra_args_provider,
+
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+            pretrain(train_valid_test_datasets_provider,initialize_megatron(extra_args_provider=extra_args_provider,    initialize_megatron(extra_args_provider=extra_args_provider,
+
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+assert torch.cuda.is_available(), "Megatron requires CUDA."    
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+AssertionError  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+: Megatron requires CUDA.
+    initialize_megatron(extra_args_provider=extra_args_provider,    
+initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+result = fn(*args, **kwargs)    
+result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+        result = fn(*args, **kwargs)initialize_megatron(extra_args_provider=extra_args_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+          File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+result = fn(*args, **kwargs)result = fn(*args, **kwargs)
+    
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    result = fn(*args, **kwargs)
+      File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+result = fn(*args, **kwargs)
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+        assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."
+    
+    AssertionErrorassert torch.cuda.is_available(), "Megatron requires CUDA."AssertionErrorresult = fn(*args, **kwargs): 
+: 
+Megatron requires CUDA.AssertionErrorMegatron requires CUDA.              File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+
+: 
+assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."    Megatron requires CUDA.    
+
+
+assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionErrorassert torch.cuda.is_available(), "Megatron requires CUDA."AssertionError
+AssertionError: 
+: AssertionErrorMegatron requires CUDA.: Megatron requires CUDA.AssertionError: 
+Megatron requires CUDA.
+: Megatron requires CUDA.
+Megatron requires CUDA.
+
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: Megatron requires CUDA.
+[ERROR] 2026-01-15-01:26:22 (PID:2593893, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593900, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593899, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593892, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception[ERROR] 2026-01-15-01:26:22 (PID:2593898, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+
+[ERROR] 2026-01-15-01:26:22 (PID:2593889, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593894, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp81d2_n9x'>
+  _warnings.warn(warn_message, ResourceWarning)
+
+[ERROR] 2026-01-15-01:26:22 (PID:2593890, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593888, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593903, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception[ERROR] 2026-01-15-01:26:22 (PID:2593896, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+
+[ERROR] 2026-01-15-01:26:22 (PID:2593897, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593902, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-15-01:26:22 (PID:2593895, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpei1plwsl'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp8liwvyie'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp5bc_x6mf'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmplp65358l'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpid01vpj9'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp4tvizvg5'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpue6qu159'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpzjgq6t0f'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp506s9sc8'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpzzs4bibd'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpd4aenxtg'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp1snufrtt'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpmv739cnk'>
+  _warnings.warn(warn_message, ResourceWarning)
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+syssys:1: :1: DeprecationWarningDeprecationWarning: : builtin type swigvarlink has no __module__ attributebuiltin type swigvarlink has no __module__ attribute
+
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+syssys:1: :1: sysDeprecationWarningDeprecationWarning: : builtin type swigvarlink has no __module__ attributebuiltin type swigvarlink has no __module__ attribute:1: 
+
+DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+W0115 01:26:24.137000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593888 closing signal SIGTERM
+W0115 01:26:24.137000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593889 closing signal SIGTERM
+W0115 01:26:24.140000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593890 closing signal SIGTERM
+W0115 01:26:24.143000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593891 closing signal SIGTERM
+W0115 01:26:24.145000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593893 closing signal SIGTERM
+W0115 01:26:24.148000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593894 closing signal SIGTERM
+W0115 01:26:24.150000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593895 closing signal SIGTERM
+W0115 01:26:24.152000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593896 closing signal SIGTERM
+W0115 01:26:24.154000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593897 closing signal SIGTERM
+W0115 01:26:24.157000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593898 closing signal SIGTERM
+W0115 01:26:24.159000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593899 closing signal SIGTERM
+W0115 01:26:24.161000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593900 closing signal SIGTERM
+W0115 01:26:24.164000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593901 closing signal SIGTERM
+W0115 01:26:24.166000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593902 closing signal SIGTERM
+W0115 01:26:24.169000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2593903 closing signal SIGTERM
+E0115 01:26:24.601000 2593754 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 4 (pid: 2593892) of binary: /sharedata/shareenvs/qiuwu-optimizer-dev/bin/python3.10
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/bin//torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-01-15_01:26:24
+  host      : qpto-dev-server-28-server-0
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 2593892)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[ERROR] 2026-01-15-01:26:24 (PID:2593754, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception

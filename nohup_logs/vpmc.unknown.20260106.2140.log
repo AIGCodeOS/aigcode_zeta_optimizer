@@ -1,0 +1,401 @@
+W0106 21:40:18.308000 703646 site-packages/torch/distributed/run.py:792] 
+W0106 21:40:18.308000 703646 site-packages/torch/distributed/run.py:792] *****************************************
+W0106 21:40:18.308000 703646 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0106 21:40:18.308000 703646 site-packages/torch/distributed/run.py:792] *****************************************
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:298: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.autocast, torch.load, torch.set_default_device, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch_npu/contrib/transfer_to_npu.py:255: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch_npu/dynamo/torchair/__init__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/core/transformer/transformer_block.py:32: DeprecationWarning: The 'megatron.core.transformer.custom_layers.transformer_engine' 
+    module is deprecated and will be removed in 0.10.0. Please use 
+    'megatron.core.extensions.transformer_engine' instead.
+  from megatron.core.transformer.custom_layers.transformer_engine import TENorm
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+WARNING:root:fail to call reset_thread_affinity, please upgrade torch_npu.
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+Traceback (most recent call last):
+    main()
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    Traceback (most recent call last):
+main()        Traceback (most recent call last):
+main()Traceback (most recent call last):
+
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+pretrain(train_valid_test_datasets_provider,  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    pretrain(train_valid_test_datasets_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+            pretrain(train_valid_test_datasets_provider,    
+main()main()initialize_megatron(extra_args_provider=extra_args_provider,      File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+
+
+
+main()      File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+main()  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+                initialize_megatron(extra_args_provider=extra_args_provider,pretrain(train_valid_test_datasets_provider,pretrain(train_valid_test_datasets_provider,result = fn(*args, **kwargs)
+
+
+    
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+pretrain(train_valid_test_datasets_provider,  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+pretrain(train_valid_test_datasets_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    result = fn(*args, **kwargs)
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+        assert torch.cuda.is_available(), "Megatron requires CUDA."result = fn(*args, **kwargs)
+
+          File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+AssertionErrorinitialize_megatron(extra_args_provider=extra_args_provider,initialize_megatron(extra_args_provider=extra_args_provider,: 
+
+Megatron requires CUDA.  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+        initialize_megatron(extra_args_provider=extra_args_provider,initialize_megatron(extra_args_provider=extra_args_provider,
+    
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+assert torch.cuda.is_available(), "Megatron requires CUDA."  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+AssertionError: Megatron requires CUDA.    
+    assert torch.cuda.is_available(), "Megatron requires CUDA."    
+        result = fn(*args, **kwargs)[ERROR] 2026-01-06-21:40:38 (PID:703777, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exceptionTraceback (most recent call last):
+
+[ERROR] 2026-01-06-21:40:38 (PID:703768, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+result = fn(*args, **kwargs)Traceback (most recent call last):
+
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpz28wsrly'>
+  _warnings.warn(warn_message, ResourceWarning)
+result = fn(*args, **kwargs)AssertionError
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpn22p62j6'>
+  _warnings.warn(warn_message, ResourceWarning)
+:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+
+Megatron requires CUDA.result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: Megatron requires CUDA.
+            assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."
+
+
+AssertionErrorAssertionError    AssertionError: : : Megatron requires CUDA.    main()Megatron requires CUDA.Megatron requires CUDA.
+
+main()
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+        main()
+main()  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+        pretrain(train_valid_test_datasets_provider,pretrain(train_valid_test_datasets_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+Traceback (most recent call last):
+        pretrain(train_valid_test_datasets_provider,pretrain(train_valid_test_datasets_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[ERROR] 2026-01-06-21:40:38 (PID:703780, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception        initialize_megatron(extra_args_provider=extra_args_provider,initialize_megatron(extra_args_provider=extra_args_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+        initialize_megatron(extra_args_provider=extra_args_provider,initialize_megatron(extra_args_provider=extra_args_provider,
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+    main()
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+        result = fn(*args, **kwargs)result = fn(*args, **kwargs)
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    result = fn(*args, **kwargs)    
+result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    pretrain(train_valid_test_datasets_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    assert torch.cuda.is_available(), "Megatron requires CUDA."    
+assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: AssertionErrorMegatron requires CUDA.: 
+        Megatron requires CUDA.assert torch.cuda.is_available(), "Megatron requires CUDA."assert torch.cuda.is_available(), "Megatron requires CUDA."
+
+
+AssertionErrorAssertionError: : Megatron requires CUDA.
+[ERROR] 2026-01-06-21:40:38 (PID:703779, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-06-21:40:38 (PID:703767, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-06-21:40:38 (PID:703773, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+Megatron requires CUDA.
+
+[ERROR] 2026-01-06-21:40:38 (PID:703765, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception    
+[ERROR] 2026-01-06-21:40:38 (PID:703778, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-06-21:40:38 (PID:703766, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-06-21:40:38 (PID:703772, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[ERROR] 2026-01-06-21:40:38 (PID:703771, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpacls51oh'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmprp3gr9j1'>
+  _warnings.warn(warn_message, ResourceWarning)
+initialize_megatron(extra_args_provider=extra_args_provider,/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpuct6ls7z'>
+  _warnings.warn(warn_message, ResourceWarning)
+
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpj55_e7hw'>
+  _warnings.warn(warn_message, ResourceWarning)
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmppk1m5zz5'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpnh9mdryo'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp8__3i0td'>
+  _warnings.warn(warn_message, ResourceWarning)
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp0nqdt1cp'>
+  _warnings.warn(warn_message, ResourceWarning)
+    result = fn(*args, **kwargs)
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmphe5_c0s8'>
+  _warnings.warn(warn_message, ResourceWarning)
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: Megatron requires CUDA.
+[ERROR] 2026-01-06-21:40:38 (PID:703769, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp4txyro8t'>
+  _warnings.warn(warn_message, ResourceWarning)
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+        Traceback (most recent call last):
+main()main()
+
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+        pretrain(train_valid_test_datasets_provider,
+pretrain(train_valid_test_datasets_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+
+    main()
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+    pretrain(train_valid_test_datasets_provider,    
+initialize_megatron(extra_args_provider=extra_args_provider,  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+    result = fn(*args, **kwargs)
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    initialize_megatron(extra_args_provider=extra_args_provider,    
+result = fn(*args, **kwargs)  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: Megatron requires CUDA.
+        result = fn(*args, **kwargs)assert torch.cuda.is_available(), "Megatron requires CUDA."
+
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+AssertionError    : [ERROR] 2026-01-06-21:40:38 (PID:703776, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exceptionassert torch.cuda.is_available(), "Megatron requires CUDA."
+Megatron requires CUDA.
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpsc2n091m'>
+  _warnings.warn(warn_message, ResourceWarning)
+
+AssertionError: [ERROR] 2026-01-06-21:40:38 (PID:703775, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exceptionMegatron requires CUDA.
+
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmp4zg6__5c'>
+  _warnings.warn(warn_message, ResourceWarning)
+[ERROR] 2026-01-06-21:40:38 (PID:703774, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpiqieik1t'>
+  _warnings.warn(warn_message, ResourceWarning)
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+    main()
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+    pretrain(train_valid_test_datasets_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 420, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/initialize.py", line 177, in wrapper
+    result = fn(*args, **kwargs)
+  File "/sharedata/ckw/MindSpeed-LLM/megatron/training/initialize.py", line 57, in initialize_megatron
+    assert torch.cuda.is_available(), "Megatron requires CUDA."
+AssertionError: Megatron requires CUDA.
+[ERROR] 2026-01-06-21:40:38 (PID:703770, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpo37svm4t'>
+  _warnings.warn(warn_message, ResourceWarning)
+
+W0106 21:40:40.185000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703765 closing signal SIGTERM
+W0106 21:40:40.186000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703766 closing signal SIGTERM
+W0106 21:40:40.189000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703768 closing signal SIGTERM
+W0106 21:40:40.194000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703769 closing signal SIGTERM
+W0106 21:40:40.196000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703770 closing signal SIGTERM
+W0106 21:40:40.200000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703771 closing signal SIGTERM
+W0106 21:40:40.203000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703772 closing signal SIGTERM
+W0106 21:40:40.206000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703773 closing signal SIGTERM
+W0106 21:40:40.208000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703774 closing signal SIGTERM
+W0106 21:40:40.211000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703775 closing signal SIGTERM
+W0106 21:40:40.214000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703776 closing signal SIGTERM
+W0106 21:40:40.216000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703777 closing signal SIGTERM
+W0106 21:40:40.219000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703778 closing signal SIGTERM
+W0106 21:40:40.221000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703779 closing signal SIGTERM
+W0106 21:40:40.224000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 703780 closing signal SIGTERM
+E0106 21:40:40.683000 703646 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 703767) of binary: /sharedata/shareenvs/qiuwuoptimizer-dev/bin/python
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-01-06_21:40:40
+  host      : qpto-dev-server-28-server-0
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 703767)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[ERROR] 2026-01-06-21:40:40 (PID:703646, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
