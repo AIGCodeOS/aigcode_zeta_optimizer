@@ -1,0 +1,82 @@
+WARNING: one_logger package is required to enable e2e metrics tracking. please go to https://confluence.nvidia.com/display/MLWFO/Package+Repositories for details to install it
+INFO:mindspeed_llm.training.initialize:[InitHook] data_path=/sharedata/ckw/dataset/openwebtext_text_document is not raw. Skip preprocessing.
+/sharedata/ckw/MindSpeed-LLM/megatron/core/models/gpt/gpt_layer_specs.py:283: UserWarning: This private function is on a deprecation track. Please switch to `get_mlp_module_spec`
+        since it will be removed in a future release.
+  warnings.warn(
+INFO:megatron.core.timers:(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (82.39, 543.78)
+    train/valid/test-data-iterators-setup ..........: (339.67, 476.62)
+WARNING:mindspeed.core.fusions.fused_rope:Setting apply_rope_fusion to false because its implementation is not included in Apex. Try upgrading to the latest version
+Using /root/.cache/torch_extensions/py310_cpu as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py310_cpu/npu_rotary_position_embedding/build.ninja...
+Building extension module npu_rotary_position_embedding...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module npu_rotary_position_embedding...
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank15]:     main()
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank15]:     pretrain(train_valid_test_datasets_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 483, in pretrain
+[rank15]:     iteration, num_floating_point_operations_so_far = train(*train_args)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 649, in train
+[rank15]:     train_step(forward_step_func,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1354, in train_step
+[rank15]:     update_successful, grad_norm, num_zeros_in_grad = optimizer.step()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/megatron_basic/count_zero_fix.py", line 36, in step
+[rank15]:     update_successful = self.step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/optimizer.py", line 1061, in step_with_ready_grads
+[rank15]:     success &= optimizer.step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 53, in wrapper
+[rank15]:     update_successful = func(*args, **kwargs)
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/distrib_optimizer.py", line 2093, in step_with_ready_grads
+[rank15]:     update_successful = super().step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/optimizer.py", line 453, in step_with_ready_grads
+[rank15]:     self.optimizer.step()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+[rank15]:     out = func(*args, **kwargs)
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/models/common/zetas.py", line 225, in step
+[rank15]:     state['exp_avg_sq'].mul_(beta2).add_(grad_sq, alpha=1 - beta2)
+[rank15]: KeyError: 'exp_avg_sq'
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank15]:     main()
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank15]:     pretrain(train_valid_test_datasets_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 483, in pretrain
+[rank15]:     iteration, num_floating_point_operations_so_far = train(*train_args)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 649, in train
+[rank15]:     train_step(forward_step_func,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1354, in train_step
+[rank15]:     update_successful, grad_norm, num_zeros_in_grad = optimizer.step()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/megatron_basic/count_zero_fix.py", line 36, in step
+[rank15]:     update_successful = self.step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/optimizer.py", line 1061, in step_with_ready_grads
+[rank15]:     success &= optimizer.step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 53, in wrapper
+[rank15]:     update_successful = func(*args, **kwargs)
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/distrib_optimizer.py", line 2093, in step_with_ready_grads
+[rank15]:     update_successful = super().step_with_ready_grads()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/optimizer.py", line 453, in step_with_ready_grads
+[rank15]:     self.optimizer.step()
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+[rank15]:     out = func(*args, **kwargs)
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank15]:     return func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/models/common/zetas.py", line 225, in step
+[rank15]:     state['exp_avg_sq'].mul_(beta2).add_(grad_sq, alpha=1 - beta2)
+[rank15]: KeyError: 'exp_avg_sq'

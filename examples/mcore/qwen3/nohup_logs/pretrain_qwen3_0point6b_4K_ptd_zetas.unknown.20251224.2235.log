@@ -1,0 +1,197 @@
+W1224 22:35:55.781000 631033 site-packages/torch/distributed/run.py:774] 
+W1224 22:35:55.781000 631033 site-packages/torch/distributed/run.py:774] *****************************************
+W1224 22:35:55.781000 631033 site-packages/torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1224 22:35:55.781000 631033 site-packages/torch/distributed/run.py:774] *****************************************
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch_npu/contrib/transfer_to_npu.py:345: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.load, torch.set_default_device, torch.get_device_module, torch.sparse_compressed_tensor, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch_npu/contrib/transfer_to_npu.py:276: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+        from mindspeed_llm import megatron_adaptorfrom mindspeed_llm import megatron_adaptor
+
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor    
+from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+        from mindspeed.features_manager.features_manager import MindSpeedFeaturesManagerfrom mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+
+ModuleNotFoundErrorModuleNotFoundError: : No module named 'mindspeed'No module named 'mindspeed'
+
+[ERROR] 2025-12-24-22:36:02 (PID:631160, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception[ERROR] 2025-12-24-22:36:02 (PID:631161, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631149, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631150, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631152, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631158, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631151, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631162, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:03 (PID:631157, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+Traceback (most recent call last):
+  File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 10, in <module>
+    from mindspeed_llm import megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/__init__.py", line 16, in <module>
+    from mindspeed_llm.tasks import megatron_adaptor_v2 as megatron_adaptor
+  File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/tasks/megatron_adaptor_v2.py", line 11, in <module>
+    from mindspeed.features_manager.features_manager import MindSpeedFeaturesManager
+ModuleNotFoundError: No module named 'mindspeed'
+[ERROR] 2025-12-24-22:36:04 (PID:631164, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+W1224 22:36:04.532000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631150 closing signal SIGTERM
+W1224 22:36:04.533000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631151 closing signal SIGTERM
+W1224 22:36:04.533000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631152 closing signal SIGTERM
+W1224 22:36:04.534000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631154 closing signal SIGTERM
+W1224 22:36:04.534000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631155 closing signal SIGTERM
+W1224 22:36:04.534000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631156 closing signal SIGTERM
+W1224 22:36:04.534000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631157 closing signal SIGTERM
+W1224 22:36:04.535000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631158 closing signal SIGTERM
+W1224 22:36:04.535000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631159 closing signal SIGTERM
+W1224 22:36:04.535000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631160 closing signal SIGTERM
+W1224 22:36:04.535000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631161 closing signal SIGTERM
+W1224 22:36:04.535000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631162 closing signal SIGTERM
+W1224 22:36:04.536000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631163 closing signal SIGTERM
+W1224 22:36:04.536000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631164 closing signal SIGTERM
+W1224 22:36:04.536000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 631165 closing signal SIGTERM
+E1224 22:36:05.316000 631033 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 631149) of binary: /usr/local/python3.11.13/bin/python3.11
+Traceback (most recent call last):
+  File "/usr/local/python3.11.13/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/python3.11.13/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.11.13/lib/python3.11/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/usr/local/python3.11.13/lib/python3.11/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/usr/local/python3.11.13/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.11.13/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-12-24_22:36:04
+  host      : qiuwu-moreai-8npu-server-28-server-0
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 631149)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[ERROR] 2025-12-24-22:36:05 (PID:631033, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception

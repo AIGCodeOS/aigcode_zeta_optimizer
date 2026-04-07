@@ -1,0 +1,103 @@
+WARNING: one_logger package is required to enable e2e metrics tracking. please go to https://confluence.nvidia.com/display/MLWFO/Package+Repositories for details to install it
+INFO:mindspeed_llm.training.initialize:[InitHook] data_path=/sharedata/ckw/dataset/openwebtext_text_document is not raw. Skip preprocessing.
+/sharedata/ckw/MindSpeed-LLM/megatron/core/models/gpt/gpt_layer_specs.py:283: UserWarning: This private function is on a deprecation track. Please switch to `get_mlp_module_spec`
+        since it will be removed in a future release.
+  warnings.warn(
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 3): 265700096
+INFO:megatron.core.distributed.param_and_grad_buffer:Number of buckets for gradient all-reduce / reduce-scatter: 2
+Params for bucket 1 (155582464 elements, 155582464 padded size):
+	module.output_layer.weight
+Params for bucket 2 (110117632 elements, 110117632 padded size):
+	module.decoder.layers.4.self_attention.linear_proj.weight
+	module.decoder.layers.3.pre_mlp_layernorm.weight
+	module.decoder.layers.2.pre_mlp_layernorm.weight
+	module.decoder.layers.2.self_attention.linear_qkv.weight
+	module.decoder.layers.1.mlp.linear_fc1.weight
+	module.decoder.layers.1.self_attention.linear_qkv.weight
+	module.decoder.layers.0.mlp.linear_fc2.weight
+	module.decoder.layers.0.self_attention.linear_proj.weight
+	module.decoder.layers.6.pre_mlp_layernorm.weight
+	module.decoder.layers.6.self_attention.linear_qkv.weight
+	module.decoder.layers.5.pre_mlp_layernorm.weight
+	module.decoder.layers.4.self_attention.k_layernorm.weight
+	module.decoder.layers.4.input_layernorm.weight
+	module.decoder.layers.2.input_layernorm.weight
+	module.decoder.layers.1.mlp.linear_fc2.weight
+	module.decoder.layers.0.input_layernorm.weight
+	module.decoder.layers.4.self_attention.q_layernorm.weight
+	module.decoder.layers.3.self_attention.q_layernorm.weight
+	module.decoder.layers.2.mlp.linear_fc1.weight
+	module.decoder.layers.4.mlp.linear_fc1.weight
+	module.decoder.layers.6.self_attention.linear_proj.weight
+	module.decoder.layers.5.mlp.linear_fc1.weight
+	module.decoder.layers.4.self_attention.linear_qkv.weight
+	module.decoder.layers.3.self_attention.k_layernorm.weight
+	module.decoder.layers.3.self_attention.linear_proj.weight
+	module.decoder.layers.2.self_attention.k_layernorm.weight
+	module.decoder.layers.1.pre_mlp_layernorm.weight
+	module.decoder.layers.0.self_attention.k_layernorm.weight
+	module.decoder.layers.6.self_attention.k_layernorm.weight
+	module.decoder.layers.6.input_layernorm.weight
+	module.decoder.layers.5.self_attention.k_layernorm.weight
+	module.decoder.layers.5.self_attention.linear_proj.weight
+	module.decoder.layers.4.mlp.linear_fc2.weight
+	module.decoder.layers.3.input_layernorm.weight
+	module.decoder.layers.2.self_attention.q_layernorm.weight
+	module.decoder.layers.0.mlp.linear_fc1.weight
+	module.decoder.layers.0.self_attention.q_layernorm.weight
+	module.decoder.layers.0.self_attention.linear_qkv.weight
+	module.decoder.layers.5.input_layernorm.weight
+	module.decoder.layers.6.self_attention.q_layernorm.weight
+	module.decoder.layers.3.mlp.linear_fc1.weight
+	module.decoder.layers.2.self_attention.linear_proj.weight
+	module.decoder.layers.1.self_attention.linear_proj.weight
+	module.decoder.layers.6.mlp.linear_fc1.weight
+	module.decoder.layers.5.self_attention.q_layernorm.weight
+	module.decoder.layers.4.pre_mlp_layernorm.weight
+	module.decoder.layers.3.mlp.linear_fc2.weight
+	module.decoder.layers.3.self_attention.linear_qkv.weight
+	module.decoder.layers.2.mlp.linear_fc2.weight
+	module.decoder.layers.1.self_attention.k_layernorm.weight
+	module.decoder.layers.1.input_layernorm.weight
+	module.decoder.final_layernorm.weight
+	module.decoder.layers.6.mlp.linear_fc2.weight
+	module.decoder.layers.5.mlp.linear_fc2.weight
+	module.decoder.layers.5.self_attention.linear_qkv.weight
+	module.decoder.layers.1.self_attention.q_layernorm.weight
+	module.decoder.layers.0.pre_mlp_layernorm.weight
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank3]:     main()
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank3]:     pretrain(train_valid_test_datasets_provider,
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 455, in pretrain
+[rank3]:     train_args, test_data_iterator_list = build_train_args(args, timers, train_valid_test_dataset_provider,
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 325, in build_train_args
+[rank3]:     model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1125, in setup_model_and_optimizer
+[rank3]:     optimizer = get_megatron_optimizer(config, model, no_wd_decay_cond,
+[rank3]:   File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 67, in wrapper
+[rank3]:     chained_optimizer = func(*args, **kwargs)
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 544, in get_megatron_optimizer
+[rank3]:     _get_megatron_optimizer_based_on_param_groups(
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 352, in _get_megatron_optimizer_based_on_param_groups
+[rank3]:     optimizer = Adam(**kwargs)
+[rank3]: TypeError: ZetaS.__init__() got an unexpected keyword argument 'eps'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank3]:     main()
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank3]:     pretrain(train_valid_test_datasets_provider,
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 455, in pretrain
+[rank3]:     train_args, test_data_iterator_list = build_train_args(args, timers, train_valid_test_dataset_provider,
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 325, in build_train_args
+[rank3]:     model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1125, in setup_model_and_optimizer
+[rank3]:     optimizer = get_megatron_optimizer(config, model, no_wd_decay_cond,
+[rank3]:   File "/sharedata/shareenvs/qiuwuoptimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 67, in wrapper
+[rank3]:     chained_optimizer = func(*args, **kwargs)
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 544, in get_megatron_optimizer
+[rank3]:     _get_megatron_optimizer_based_on_param_groups(
+[rank3]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 352, in _get_megatron_optimizer_based_on_param_groups
+[rank3]:     optimizer = Adam(**kwargs)
+[rank3]: TypeError: ZetaS.__init__() got an unexpected keyword argument 'eps'

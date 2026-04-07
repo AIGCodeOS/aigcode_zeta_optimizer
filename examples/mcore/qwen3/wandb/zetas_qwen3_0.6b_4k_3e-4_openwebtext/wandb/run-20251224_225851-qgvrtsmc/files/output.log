@@ -1,0 +1,45 @@
+WARNING: one_logger package is required to enable e2e metrics tracking. please go to https://confluence.nvidia.com/display/MLWFO/Package+Repositories for details to install it
+INFO:mindspeed_llm.training.initialize:[InitHook] data_path=/sharedata/ckw/dataset/openwebtext_text_document is not raw. Skip preprocessing.
+/sharedata/ckw/MindSpeed-LLM/megatron/core/models/gpt/gpt_layer_specs.py:283: UserWarning: This private function is on a deprecation track. Please switch to `get_mlp_module_spec`
+        since it will be removed in a future release.
+  warnings.warn(
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank15]:     main()
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank15]:     pretrain(train_valid_test_datasets_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 455, in pretrain
+[rank15]:     train_args, test_data_iterator_list = build_train_args(args, timers, train_valid_test_dataset_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 325, in build_train_args
+[rank15]:     model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1125, in setup_model_and_optimizer
+[rank15]:     optimizer = get_megatron_optimizer(config, model, no_wd_decay_cond,
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 67, in wrapper
+[rank15]:     chained_optimizer = func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 544, in get_megatron_optimizer
+[rank15]:     _get_megatron_optimizer_based_on_param_groups(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 410, in _get_megatron_optimizer_based_on_param_groups
+[rank15]:     optimizer = DistributedOptimizer(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/distrib_optimizer.py", line 481, in __init__
+[rank15]:     assert isinstance(optimizer, (Adam, HybridDeviceOptimizer)) or optimizer is None, (
+[rank15]: AssertionError: Only Adam and HybridDeviceOptimizer currently supported, due to checkpointing requirements.
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 308, in <module>
+[rank15]:     main()
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/pretrain_gpt.py", line 301, in main
+[rank15]:     pretrain(train_valid_test_datasets_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 455, in pretrain
+[rank15]:     train_args, test_data_iterator_list = build_train_args(args, timers, train_valid_test_dataset_provider,
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/mindspeed_llm/training/training.py", line 325, in build_train_args
+[rank15]:     model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/training/training.py", line 1125, in setup_model_and_optimizer
+[rank15]:     optimizer = get_megatron_optimizer(config, model, no_wd_decay_cond,
+[rank15]:   File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/mindspeed/core/optimizer/fix_duplicate_allgather.py", line 67, in wrapper
+[rank15]:     chained_optimizer = func(*args, **kwargs)
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 544, in get_megatron_optimizer
+[rank15]:     _get_megatron_optimizer_based_on_param_groups(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/__init__.py", line 410, in _get_megatron_optimizer_based_on_param_groups
+[rank15]:     optimizer = DistributedOptimizer(
+[rank15]:   File "/sharedata/ckw/MindSpeed-LLM/megatron/core/optimizer/distrib_optimizer.py", line 481, in __init__
+[rank15]:     assert isinstance(optimizer, (Adam, HybridDeviceOptimizer)) or optimizer is None, (
+[rank15]: AssertionError: Only Adam and HybridDeviceOptimizer currently supported, due to checkpointing requirements.

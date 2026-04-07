@@ -1,0 +1,8 @@
+{"time":"2025-12-24T22:14:24.687958027+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2025-12-24T22:14:25.569628224+08:00","level":"INFO","msg":"stream: created new stream","id":"t0cppait"}
+{"time":"2025-12-24T22:14:25.569703555+08:00","level":"INFO","msg":"handler: started","stream_id":"t0cppait"}
+{"time":"2025-12-24T22:14:25.575186317+08:00","level":"INFO","msg":"stream: started","id":"t0cppait"}
+{"time":"2025-12-24T22:14:25.575188747+08:00","level":"INFO","msg":"writer: started","stream_id":"t0cppait"}
+{"time":"2025-12-24T22:14:25.575201357+08:00","level":"INFO","msg":"sender: started","stream_id":"t0cppait"}
+{"time":"2025-12-24T22:57:42.102021809+08:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/584272225-south-china-university-of-technology/qwen3/t0cppait/file_stream"}
+{"time":"2025-12-24T22:57:42.102557475+08:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/584272225-south-china-university-of-technology/qwen3/t0cppait/file_stream: {\"error\":\"run qwen3/t0cppait not found while streaming file\"}"}

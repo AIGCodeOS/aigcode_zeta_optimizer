@@ -1,0 +1,998 @@
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_setup.py:_flush():80] Current SDK version is 0.23.0
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_setup.py:_flush():80] Configure stats pid to 1865610
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_setup.py:_flush():80] Loading settings from /root/.config/wandb/settings
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_setup.py:_flush():80] Loading settings from /sharedata/ckw/MindSpeed-LLM/examples/mcore/qwen3/wandb/settings
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_init.py:setup_run_log_directory():713] Logging user logs to ./wandb/zetas_qwen3_0.6b_4k_3e-4_openwebtext/wandb/run-20251224_230109-g9l8m515/logs/debug.log
+2025-12-24 23:01:09,196 INFO    MainThread:1865610 [wandb_init.py:setup_run_log_directory():714] Logging internal logs to ./wandb/zetas_qwen3_0.6b_4k_3e-4_openwebtext/wandb/run-20251224_230109-g9l8m515/logs/debug-internal.log
+2025-12-24 23:01:09,199 INFO    MainThread:1865610 [wandb_init.py:init():840] calling init triggers
+2025-12-24 23:01:09,199 INFO    MainThread:1865610 [wandb_init.py:init():845] wandb.init called with sweep_config: {}
+config: {'num_layers': 28, 'encoder_num_layers': 28, 'decoder_num_layers': None, 'hidden_size': 1024, 'ffn_hidden_size': 3072, 'num_attention_heads': 16, 'attention_backend': <AttnBackend.auto: 5>, 'kv_channels': 128, 'group_query_attention': True, 'num_query_groups': 8, 'max_position_embeddings': 32768, 'position_embedding_type': 'rope', 'relative_attention_num_buckets': 32, 'relative_attention_max_distance': 128, 'use_rotary_position_embeddings': True, 'rotary_base': 1000000, 'rotary_percent': 1.0, 'rotary_interleaved': False, 'rotary_seq_len_interpolation_factor': None, 'use_rope_scaling': False, 'rope_scaling_factor': 8.0, 'add_position_embedding': True, 'mrope_section': None, 'make_vocab_size_divisible_by': 1, 'normalization': 'RMSNorm', 'norm_epsilon': 1e-06, 'apply_layernorm_1p': False, 'apply_residual_connection_post_layernorm': False, 'openai_gelu': False, 'squared_relu': False, 'swiglu': True, 'onnx_safe': None, 'bert_binary_head': True, 'untie_embeddings_and_output_weights': False, 'multi_latent_attention': False, 'mtp_num_layers': None, 'mtp_loss_scaling_factor': 0.1, 'attention_dropout': 0.0, 'hidden_dropout': 0.0, 'weight_decay': 0.1, 'start_weight_decay': 0.1, 'end_weight_decay': 0.1, 'weight_decay_incr_style': 'constant', 'clip_grad': 1.0, 'adam_beta1': 0.9, 'adam_beta2': 0.95, 'adam_eps': 1e-08, 'sgd_momentum': 0.9, 'micro_batch_size': 1, 'global_batch_size': 64, 'rampup_batch_size': None, 'decrease_batch_size_if_needed': False, 'recompute_granularity': None, 'check_for_nan_in_loss_and_grad': True, 'check_for_spiky_loss': False, 'check_for_large_grads': False, 'distribute_saved_activations': False, 'recompute_method': None, 'recompute_num_layers': None, 'recompute_modules': None, 'clone_scatter_output_in_embedding': True, 'profile': False, 'profile_step_start': 10, 'profile_step_end': 12, 'iterations_to_skip': [], 'result_rejected_tracker_filename': None, 'enable_gloo_process_groups': True, 'use_pytorch_profiler': False, 'profile_ranks': [0], 'record_memory_history': False, 'memory_snapshot_path': 'snapshot.pickle', 'tp_comm_overlap': False, 'tp_comm_overlap_cfg': None, 'tp_comm_overlap_ag': True, 'tp_comm_overlap_rs': True, 'tp_comm_overlap_rs_dgrad': False, 'tp_comm_bulk_dgrad': True, 'tp_comm_bulk_wgrad': True, 'tp_comm_bootstrap_backend': 'nccl', 'use_cpu_initialization': None, 'empty_unused_memory_level': 0, 'deterministic_mode': False, 'check_weight_hash_across_dp_replicas_interval': None, 'calculate_per_token_loss': False, 'train_sync_interval': None, 'train_iters': 20000, 'train_samples': None, 'log_interval': 1, 'exit_interval': None, 'exit_duration_in_mins': None, 'exit_signal_handler': False, 'tensorboard_dir': './tensorboard/qwen3_06b_4k_mcore_ptd', 'masked_softmax_fusion': False, 'bias_gelu_fusion': False, 'bias_swiglu_fusion': True, 'bias_dropout_fusion': True, 'apply_rope_fusion': True, 'cross_entropy_loss_fusion': False, 'cross_entropy_fusion_impl': 'native', 'use_flash_attn': True, 'add_bias_linear': False, 'add_qkv_bias': False, 'optimizer': 'adam', 'optimizer_cpu_offload': False, 'optimizer_offload_fraction': 1.0, 'use_torch_optimizer_for_cpu_offload': False, 'overlap_cpu_optimizer_d2h_h2d': False, 'pin_cpu_grads': True, 'pin_cpu_params': True, 'dataloader_type': 'single', 'async_tensor_model_parallel_allreduce': True, 'no_persist_layer_norm': False, 'sequence_parallel': False, 'gradient_accumulation_fusion': False, 'deprecated_use_mcore_models': True, 'use_legacy_models': False, 'manual_gc': False, 'manual_gc_interval': 0, 'manual_gc_eval': True, 'tp_comm_split_ag': True, 'tp_comm_split_rs': True, 'pipeline_model_parallel_comm_backend': None, 'seed': 42, 'data_parallel_random_init': False, 'init_method_std': 0.02, 'init_method_xavier_uniform': False, 'lr': 0.0003, 'lr_decay_style': 'linear', 'lr_wsd_decay_style': 'exponential', 'lr_decay_iters': None, 'lr_decay_samples': None, 'lr_wsd_decay_samples': None, 'lr_wsd_decay_iters': None, 'lr_warmup_fraction': 0.01, 'lr_warmup_iters': 0, 'lr_warmup_samples': 0, 'lr_warmup_init': 1.25e-07, 'min_lr': 1.25e-07, 'override_opt_param_scheduler': False, 'use_checkpoint_opt_param_scheduler': False, 'decoupled_lr': None, 'decoupled_min_lr': None, 'save': '/sharedata/ckw/ckpts/qwen3_0.6B_zetas_lr3e-4_openwebtext', 'save_interval': 400, 'no_save_optim': None, 'no_save_rng': None, 'load': None, 'no_load_optim': True, 'no_load_rng': True, 'non_persistent_save_interval': None, 'non_persistent_ckpt_type': None, 'non_persistent_global_ckpt_dir': None, 'non_persistent_local_ckpt_dir': None, 'non_persistent_local_ckpt_algo': 'fully_parallel', 'finetune': False, 'pretrained_checkpoint': None, 'ckpt_step': None, 'perform_initialization': True, 'use_checkpoint_args': False, 'use_mp_args_from_checkpoint_args': False, 'use_tokenizer_model_from_checkpoint_args': True, 'exit_on_missing_checkpoint': True, 'use_dist_ckpt_deprecated': False, 'use_persistent_ckpt_worker': False, 'auto_detect_ckpt_format': False, 'dist_ckpt_format_deprecated': None, 'ckpt_format': 'torch', 'ckpt_convert_format': None, 'ckpt_convert_save': None, 'ckpt_convert_update_legacy_dist_opt_format': False, 'ckpt_fully_parallel_save_deprecated': False, 'ckpt_fully_parallel_save': True, 'async_save': None, 'ckpt_fully_parallel_load': False, 'ckpt_assume_constant_structure': False, 'dist_ckpt_strictness': 'assume_ok_unexpected', 'fp16': False, 'bf16': True, 'grad_reduce_in_bf16': False, 'loss_scale': None, 'initial_loss_scale': 4096.0, 'min_loss_scale': 1.0, 'loss_scale_window': 1000, 'hysteresis': 2, 'fp32_residual_connection': False, 'apply_query_key_layer_scaling': False, 'attention_softmax_in_fp32': True, 'accumulate_allreduce_grads_in_fp32': True, 'fp16_lm_cross_entropy': False, 'disable_bf16_reduced_precision_matmul': False, 'tensor_model_parallel_size': 1, 'encoder_tensor_model_parallel_size': 0, 'pipeline_model_parallel_size': 4, 'encoder_pipeline_model_parallel_size': 0, 'pipeline_model_parallel_split_rank': None, 'decoder_first_pipeline_num_layers': None, 'decoder_last_pipeline_num_layers': None, 'num_layers_per_virtual_pipeline_stage': None, 'num_virtual_stages_per_pipeline_rank': None, 'microbatch_group_size_per_vp_stage': None, 'overlap_p2p_comm': False, 'overlap_p2p_comm_warmup_flush': False, 'distributed_backend': 'nccl', 'distributed_timeout_minutes': 30, 'overlap_grad_reduce': False, 'defer_embedding_wgrad_compute': False, 'wgrad_deferral_limit': 0, 'align_grad_reduce': True, 'ddp_num_buckets': None, 'ddp_bucket_size': None, 'ddp_pad_buckets_for_high_nccl_busbw': False, 'ddp_average_in_collective': False, 'overlap_param_gather': False, 'overlap_param_gather_with_optimizer_step': False, 'align_param_gather': False, 'scatter_gather_tensors_in_pipeline': True, 'use_ring_exchange_p2p': False, 'local_rank': 15, 'lazy_mpu_init': None, 'account_for_embedding_in_pipeline_split': False, 'account_for_loss_in_pipeline_split': False, 'use_distributed_optimizer': True, 'use_custom_fsdp': False, 'init_model_with_meta_device': False, 'data_parallel_sharding_strategy': 'no_shard', 'gradient_reduce_div_fusion': True, 'suggested_communication_unit_size': None, 'keep_fp8_transpose_cache_when_using_custom_fsdp': False, 'num_distributed_optimizer_instances': 1, 'use_torch_fsdp2': False, 'context_parallel_size': 1, 'cp_comm_type': ['p2p'], 'hierarchical_context_parallel_sizes': None, 'nccl_communicator_config_path': None, 'use_tp_pp_dp_mapping': False, 'replication': False, 'replication_jump': None, 'replication_factor': 2, 'eval_iters': 0, 'eval_interval': 2000, 'test_mode': False, 'skip_train': False, 'data_path': ['/sharedata/ckw/dataset/openwebtext_text_document'], 'split': '100,0,0', 'train_data_path': None, 'valid_data_path': None, 'test_data_path': None, 'data_args_path': None, 'per_split_data_args_path': None, 'data_cache_path': None, 'mmap_bin_files': True, 'mock_data': False, 'seq_length': 4096, 'encoder_seq_length': 4096, 'decoder_seq_length': None, 'retriever_seq_length': 256, 'sample_rate': 1.0, 'mask_prob': 0.15, 'short_seq_prob': 0.1, 'num_workers': 2, 'reset_position_ids': False, 'reset_attention_mask': False, 'eod_mask_loss': False, 'create_attention_mask_in_dataloader': False, 'num_dataset_builder_threads': 1, 's3_cache_path': None, 'vocab_size': None, 'vocab_file': None, 'merge_file': None, 'vocab_extra_ids': 0, 'tokenizer_type': 'PretrainedFromHF', 'tokenizer_model': None, 'tiktoken_pattern': None, 'tiktoken_num_special_tokens': 1000, 'tiktoken_special_tokens': None, 'adlr_autoresume': False, 'adlr_autoresume_interval': 1000, 'ict_head_size': None, 'biencoder_projection_dim': 0, 'biencoder_shared_query_context_model': False, 'ict_load': None, 'bert_load': None, 'titles_data_path': None, 'query_in_block_prob': 0.1, 'use_one_sent_docs': False, 'evidence_data_path': None, 'retriever_report_topk_accuracies': [], 'retriever_score_scaling': False, 'block_data_path': None, 'embedding_path': None, 'indexer_batch_size': 128, 'indexer_log_interval': 1000, 'num_classes': 1000, 'img_h': 224, 'img_w': 224, 'num_channels': 3, 'patch_dim': 16, 'classes_fraction': 1.0, 'data_per_class_fraction': 1.0, 'data_sharding': True, 'head_lr_mult': 1.0, 'vision_pretraining': False, 'vision_pretraining_type': 'classify', 'vision_backbone_type': 'vit', 'swin_backbone_type': 'tiny', 'mask_type': 'random', 'mask_factor': 1.0, 'iter_per_epoch': 1250, 'dino_local_img_size': 96, 'dino_local_crops_number': 10, 'dino_head_hidden_size': 2048, 'dino_bottleneck_size': 256, 'dino_freeze_last_layer': 1, 'dino_norm_last_layer': False, 'dino_warmup_teacher_temp': 0.04, 'dino_teacher_temp': 0.07, 'dino_warmup_teacher_temp_epochs': 30, 'qk_layernorm': True, 'expert_model_parallel_size': 1, 'expert_tensor_parallel_size': 1, 'num_experts': None, 'moe_layer_freq': 1, 'moe_ffn_hidden_size': 3072, 'moe_shared_expert_intermediate_size': None, 'moe_shared_expert_overlap': False, 'moe_grouped_gemm': False, 'moe_use_legacy_grouped_gemm': False, 'moe_layer_recompute': False, 'moe_extended_tp': False, 'moe_use_upcycling': False, 'moe_router_load_balancing_type': 'aux_loss', 'moe_router_dtype': None, 'moe_router_score_function': 'softmax', 'moe_router_topk': 2, 'moe_router_pre_softmax': False, 'moe_router_num_groups': None, 'moe_router_group_topk': None, 'moe_router_topk_scaling_factor': None, 'moe_router_enable_expert_bias': False, 'moe_router_bias_update_rate': 0.001, 'moe_aux_loss_coeff': 0.0, 'moe_z_loss_coeff': None, 'moe_input_jitter_eps': None, 'moe_per_layer_logging': False, 'moe_token_dispatcher_type': 'allgather', 'moe_enable_deepep': False, 'moe_permute_fusion': False, 'moe_expert_capacity_factor': None, 'moe_pad_expert_input_to_capacity': False, 'moe_token_drop_policy': 'probs', 'q_lora_rank': None, 'kv_lora_rank': 32, 'qk_head_dim': 128, 'qk_pos_emb_head_dim': 64, 'v_head_dim': 128, 'rotary_scaling_factor': 1.0, 'mscale': 1.0, 'mscale_all_dim': 1.0, 'heterogeneous_layers_config_path': None, 'heterogeneous_layers_config_encoded_json': None, 'log_params_norm': False, 'log_num_zeros_in_grad': False, 'log_throughput': True, 'log_progress': False, 'timing_log_level': 0, 'barrier_with_L1_time': True, 'timing_log_option': 'minmax', 'tensorboard_log_interval': 1, 'tensorboard_queue_size': 1000, 'log_timers_to_tensorboard': True, 'log_loss_scale_to_tensorboard': True, 'log_validation_ppl_to_tensorboard': False, 'log_memory_to_tensorboard': False, 'log_world_size_to_tensorboard': False, 'wandb_project': 'qwen3', 'wandb_entity': '584272225-south-china-university-of-technology', 'wandb_group': 'private', 'wandb_exp_name': 'zetas_qwen3_0.6b_4k_3e-4_openwebtext', 'wandb_save_dir': './wandb/zetas_qwen3_0.6b_4k_3e-4_openwebtext', 'logging_level': None, 'log_straggler': False, 'disable_straggler_on_startup': False, 'straggler_ctrlr_port': 65535, 'straggler_minmax_count': 1, 'run_workload_inspector_server': False, 'inference_batch_times_seqlen_threshold': -1, 'max_tokens_to_oom': 12000, 'output_bert_embeddings': False, 'bert_embedder_type': 'megatron', 'flash_decode': False, 'enable_cuda_graph': False, 'cuda_graph_warmup_steps': 3, 'external_cuda_graph': False, 'cuda_graph_scope': 'full', 'inference_max_batch_size': 8, 'inference_max_seq_length': 2560, 'inference_dynamic_batching': False, 'inference_dynamic_batching_buffer_size_gb': 40.0, 'inference_dynamic_batching_buffer_guaranteed_fraction': 0.2, 'inference_dynamic_batching_buffer_overflow_factor': None, 'inference_dynamic_batching_max_requests_override': None, 'inference_dynamic_batching_max_tokens_override': None, 'fp8': None, 'fp8_recipe': 'delayed', 'fp8_margin': 0, 'fp8_interval': 1, 'fp8_amax_history_len': 1, 'fp8_amax_compute_algo': 'most_recent', 'fp8_wgrad': True, 'transformer_impl': 'local', 'fp8_param_gather': False, 'first_last_layers_bf16': False, 'num_layers_at_start_in_bf16': 1, 'num_layers_at_end_in_bf16': 1, 'te_rng_tracker': False, 'inference_rng_tracker': False, 'retro_project_dir': None, 'retro_add_retriever': False, 'retro_cyclic_train_iters': None, 'retro_encoder_layers': 2, 'retro_encoder_hidden_dropout': 0.1, 'retro_encoder_attention_dropout': 0.1, 'retro_num_neighbors': 2, 'retro_num_retrieved_chunks': 2, 'retro_attention_gate': 1, 'retro_verify_neighbor_count': True, 'spec': ['mindspeed_llm.tasks.models.spec.qwen3_spec', 'layer_spec'], 'hybrid_attention_ratio': 0.0, 'hybrid_mlp_ratio': 0.0, 'hybrid_override_pattern': None, 'mamba_state_dim': 128, 'mamba_head_dim': 64, 'mamba_num_groups': 8, 'is_hybrid_model': False, 'yaml_cfg': None, 'use_precision_aware_optimizer': False, 'main_grads_dtype': torch.float32, 'main_params_dtype': torch.float32, 'exp_avg_dtype': torch.float32, 'exp_avg_sq_dtype': torch.float32, 'enable_one_logger': True, 'one_logger_project': 'megatron-lm', 'one_logger_run_name': None, 'one_logger_async': False, 'app_tag_run_name': None, 'app_tag_run_version': '0.0.0', 'enable_ft_package': False, 'calc_ft_timeouts': False, 'config_logger_dir': '', 'error_injection_rate': 0, 'error_injection_type': 'transient_error', 'rerun_mode': 'disabled', 'optimizer_selection': 'zetas', 'optimization_level': 2, 'o2_optimizer': False, 'o2_gradient': False, 'zeta_momentum': 0.95, 'zeta_ns_steps': 5, 'zeta_trust_region_threshold': 0.1, 'sophia_hessian_interval': 10, 'use_fused_rmsnorm': True, 'use_fused_swiglu': True, 'stage': None, 'scale_depth': None, 'no_shared_storage': True, 'add_dense_bias': False, 'add_output_layer_bias': False, 'use_gmm_fp8': True, 'te_comparison_with_cpu': False, 'te_comparison_with_bf16': False, 'full_attention_interval': 0, 'linear_key_head_dim': 0, 'linear_num_key_heads': 0, 'linear_num_value_heads': 0, 'linear_value_head_dim': 0, 'partial_rotary_factor': 0.0, 'use_triton_gdn': False, 'context_parallel_algo': 'megatron_cp_algo', 'cp_window_size': 1, 'attention_mask_type': 'causal', 'use_cp_send_recv_overlap': False, 'use_fused_ring_attention_update': False, 'megatron_cp_in_bnsd': False, 'ulysses_degree_in_cp': None, 'kv_head_repeat_before_uly_alltoall': False, 'context_parallel_kv_cache_policy': None, 'context_parallel_cache_interval': 0, 'use_ulysses_allgather_kv': False, 'jit_compile': False, 'load_checkpoint_loosely': False, 'no_shuffle': False, 'neat_pack': False, 'padded_samples': False, 'enable_thinking': None, 'pad_to_multiple_of': 8, 'handler_name': '', 'streaming': False, 'hf_datasets_params': None, 'datasets': None, 'json_keys': ['text'], 'split_sentences': False, 'keep_newlines': False, 'interleave_probs': None, 'mix_strategy': 'concat', 'dataset_dir': None, 'overwrite_cache': False, 'max_samples': None, 'cache_dir': '~/tmp', 'map_keys': None, 'pack': False, 'script_data_dir': None, 'append_eod': False, 'pad_vocab_size_to': None, 'reward_tokens': [], 'output_prefix': None, 'dataset_impl': 'mmap', 'workers': 1, 'n_subs': 1, 'merge_group_keys': None, 'embedding_multiplier_scale': 1.0, 'input_jitter': True, 'post_norm': False, 'output_multiplier_scale': None, 'scale_emb': None, 'dim_model_base': None, 'gelu_tanh': False, 'output_logit_softcapping': None, 'attn_logit_softcapping': None, 'query_pre_attn_scalar': None, 'add_rmsnorm_offset': False, 'input_embeds_norm': False, 'cla_share_factor': 1, 'share_kvstates': False, 'input_layernorm_in_fp32': False, 'skip_bias_add': True, 'output_layer_slice_num': 1, 'geglu': False, 'no_post_layer_norm': False, 'rmsnorm_weight_in_fp32': False, 'no_enable_linear_qkv': False, 'fc_type': None, 'num_layer_list': None, 'dpo_loss_type': 'sigmoid', 'is_pairwise_dataset': False, 'ref_model': None, 'refer_model_iter': 1, 'dpo_beta': 0.1, 'dpo_label_smoothing': 0.0, 'pref_ftx': 0.0, 'use_wandb': True, 'task': None, 'top_p': 0.95, 'top_k': 50, 'temperature': 0.7, 'max_length': 256, 'max_new_tokens': 128, 'hf_chat_template': False, 'add_eos_token': [], 'use_kv_cache': False, 'history_turns': 3, 'task_data_path': [], 'evaluation_batch_size': 1, 'greedy': False, 'instruction_template': '', 'no_chat_template': False, 'eval_language': 'en', 'max_eval_samples': None, 'broadcast': False, 'alternative_prompt': False, 'origin_postprocess': False, 'chain_of_thought': False, 'deprecated_use_deter_comp': False, 'deprecated_use_mc2': False, 'deprecated_cp_attention_mask_type': None, 'deprecated_moe_intermediate_size': None, 'deprecated_n_group': None, 'deprecated_topk_group': None, 'deprecated_routed_scaling_factor': None, 'deprecated_qk_rope_head_dim': None, 'deprecated_qk_nope_head_dim': None, 'deprecated_multi_head_latent_attention': False, 'deprecated_rope_scaling_beta_fast': None, 'deprecated_rope_scaling_beta_slow': None, 'enable_dsa_indexer': False, 'index_n_heads': 64, 'index_head_dim': 128, 'index_topk': 2048, 'scale_fmt': None, 'indexer_loss_coeff': 1.0, 'use_fused_lightning_indexer': False, 'mamba_d_ssm': None, 'mamba_chunk_size': 256, 'mamba_d_conv': 4, 'mamba_expand': 1, 'model_type_hf': 'llama2', 'mg_cache_dir': None, 'enable_hf2mg_convert': False, 'init_from_hf_path': None, 'model_id': None, 'loss_compute_mode': 'default', 'loss_chunk_size': None, 'use_fused_rotary_pos_emb': True, 'rope_scaling_type': None, 'original_max_position_embeddings': None, 'beta_fast': 32, 'beta_slow': 1, 'rope_scaling_mscale': 1.0, 'rope_scaling_mscale_all_dim': 0.0, 'rope_scaling_original_max_position_embeddings': None, 'longrope_freqs_type': 'mul', 'low_freq_factor': None, 'high_freq_factor': None, 'long_factor': None, 'short_factor': None, 'long_mscale': None, 'short_mscale': None, 'dynamic_factor': 1.0, 'use_glm_rope': False, 'use_fused_moe_token_permute_and_unpermute': False, 'recompute_activation_function': False, 'recompute_activation_function_num_layers': None, 'recompute_norm': False, 'recompute_norm_num_layers': None, 'enable_recompute_layers_per_pp_rank': False, 'profile_export_type': 'text', 'profile_level': 'level0', 'profile_data_simplification': False, 'profile_with_stack': False, 'profile_with_memory': False, 'profile_record_shapes': False, 'profile_with_cpu': False, 'profile_save_path': './profile_dir', 'npu_deterministic': False, 'use_ascend_coc': False, 'coc_mode': -1, 'coc_parallel_num': 1, 'coc_fused_kernel': False, 'use_ascend_mc2': False, 'tp_2d': False, 'tp_x': 1, 'tp_y': 1, 'enable_overlap_ag_with_matmul': False, 'enable_overlap_matmul_with_rs': False, 'enable_backward_overlap_ag_with_matmul': False, 'recompute_in_bubble': False, 'recompute_in_advance': False, 'noop_layers': None, 'optimize_send_recv_comm': False, 'pipeline_num_transformer_layers': None, 'schedules_method': None, 'dualpipev_dw_detach': False, 'shape_order': 'SBH', 'sliding_window': None, 'pre_tockens': 1048576, 'next_tockens': 0, 'sparse_mode': 0, 'interleave_sliding_window': None, 'padded_base_length': 128, 'mla_fa_without_pad': False, 'mla_mm_split': False, 'mla_zero_memory': False, 'mla_up_proj_tp_overlap': False, 'recompute_mla_up_proj': False, 'mla_swap_core_attn_out': False, 'mla_fa_divide_qk': False, 'mtp_mem_efficient_logits': False, 'mtp_after_norm': False, 'first_k_dense_replace': None, 'square_alibi_mask': False, 'fill_neg_inf': False, 'alibi_fusion_attn_type': None, 'use_fusion_attn_v2': False, 'tokenizer_name_or_path': '/sharedata/data/models/Qwen3-0.6B-Base', 'tokenizer_not_use_fast': True, 'padded_vocab_size': 151936, 'prompt_type': None, 'prompt_type_path': '/sharedata/ckw/MindSpeed-LLM/configs/finetune/templates.json', 'tokenizer_padding_side': 'right', 'fsdp2_config_path': None, 'reuse_fp32_param': False, 'smart_swap': False, 'swap_attention': False, 'swap_modules': 'input_norm,self_attention,post_attention_norm', 'gemm_gradient_accumulation_fusion': False, 'norm_topk_prob': False, 'seq_aux': False, 'moe_device_level_aux_loss_coeff': 0.0, 'moe_comm_aux_loss_coeff': 0.0, 'router_gating_in_fp32': False, 'moe_revert_type_after_topk': False, 'fix_router': False, 'topk_softmax_in_fp32': False, 'moe_tp_extend_ep': False, 'moe_permutation_async_comm': False, 'n_shared_experts': None, 'shared_expert_gate': False, 'shared_expert_gate_output_dimension': 1, 'moe_allgather_overlap_comm': False, 'moe_fb_overlap': False, 'moe_unperm2_mem_optim_swap': False, 'moe_alltoall_overlap_comm': False, 'moe_zero_memory': 'disable', 'moe_zero_memory_num_layers': None, 'hccl_group_buffer': None, 'hccl_group_buffer_adaptive': False, 'hccl_ep_group_buffer_adaptive_factor': -1.0, 'ema_decay': 0.9999, 'virtual_optimizer': None, 'swap_optimizer': False, 'swap_optimizer_times': 16, 'disable_gloo_group': False, 'hccl_slice_size': 10485760, 'enable_high_availability': False, 'enable_hbmfault_repair': False, 'enable_worker_reboot': False, 'distributed_optimizer_no_replica': False, 'enable_elastic_training': False, 'is_instruction_dataset': False, 'variable_seq_lengths': False, 'no_cut_token': False, 'full_shuffle_instruction_dataset': False, 'cut_max_seqlen': False, 'dataset_additional_keys': [], 'no_pad_to_seq_lengths': False, 'lora_target_modules': [], 'lora_load': None, 'lora_r': 16, 'lora_alpha': 32, 'lora_modules_to_save': None, 'lora_register_forward_hook': ['word_embeddings', 'input_layernorm'], 'lora_fusion': False, 'lora_ckpt_filter': False, 'qlora': False, 'qlora_save_dequantize': False, 'lu_lora_final_layer_index': None, 'lu_lora_lr': 1.25e-06, 'lu_lora_lr_ratio': 1.0, 'ai_framework': 'pytorch', 'rank': 15, 'world_size': 16, 'use_mcore_models': True, 'use_dist_ckpt': False, 'transformer_pipeline_model_parallel_size': 4, 'data_parallel_size': 4, 'virtual_pipeline_model_parallel_size': None, 'params_dtype': torch.bfloat16, 'consumed_train_samples': 0, 'skipped_train_samples': 0, 'consumed_valid_samples': 0, 'unaligned_linear': False, 'embed_layernorm': False, 'enable_share_memory': False, 'return_document_ids': False, 'attention_mask_on_cpu': False, 'use_fused_mlp': False, 'reduce_recompute_for_last_chunk': False, '_wandb': {}}
+2025-12-24 23:01:09,201 INFO    MainThread:1865610 [wandb_init.py:init():888] starting backend
+2025-12-24 23:01:09,593 INFO    MainThread:1865610 [wandb_init.py:init():891] sending inform_init request
+2025-12-24 23:01:09,600 INFO    MainThread:1865610 [wandb_init.py:init():899] backend started and connected
+2025-12-24 23:01:09,609 INFO    MainThread:1865610 [wandb_init.py:init():969] updated telemetry
+2025-12-24 23:01:09,621 INFO    MainThread:1865610 [wandb_init.py:init():993] communicating run to backend with 90.0 second timeout
+2025-12-24 23:01:11,444 INFO    MainThread:1865610 [wandb_init.py:init():1040] starting run threads in backend
+2025-12-24 23:01:11,672 INFO    MainThread:1865610 [wandb_run.py:_console_start():2504] atexit reg
+2025-12-24 23:01:11,672 INFO    MainThread:1865610 [wandb_run.py:_redirect():2352] redirect: wrap_raw
+2025-12-24 23:01:11,672 INFO    MainThread:1865610 [wandb_run.py:_redirect():2421] Wrapping output streams.
+2025-12-24 23:01:11,674 INFO    MainThread:1865610 [wandb_run.py:_redirect():2444] Redirects installed.
+2025-12-24 23:01:11,679 INFO    MainThread:1865610 [wandb_init.py:init():1080] run started, returning control to user process
+2025-12-24 23:01:46,427 INFO    wandb-AsyncioManager-main:1865610 [service_client.py:_forward_responses():80] Reached EOF.
+2025-12-24 23:01:46,428 INFO    wandb-AsyncioManager-main:1865610 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-12-24 23:01:51,968 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,976 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,984 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,987 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,988 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,989 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,989 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,989 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,989 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,991 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,991 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,991 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,992 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,992 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,992 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,992 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,992 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,995 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,995 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,995 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,996 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:51,997 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,003 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,006 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,006 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,007 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,008 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,009 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,015 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,015 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,015 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,015 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,015 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,016 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,016 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,016 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,016 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,028 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,031 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,031 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,031 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,033 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,034 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,034 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,034 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,034 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-24 23:01:52,034 ERROR   wandb-AsyncioManager-main:1865610 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/sharedata/shareenvs/qiuwu-optimizer-dev/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
