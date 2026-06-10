@@ -23,15 +23,22 @@ bash examples/mcore/qwen3/pretrain_qwen3_0point6b_4K_ptd_zeta.sh <MASTER_PORT> <
 | Qwen3 1.7B | Zeta | 4096 | 20,000 | ~12% Faster |
 | Qwen3 8B | Zeta | 4096 | 40,000 | TBD |
 
-### 实验结果详细报告 (PDF)
-由于当前环境限制，建议直接查看以下 PDF 报告以获取完整的 Loss 曲线和指标对比：
+### 实验结果可视化
+以下是不同规模 Qwen3 模型在 Zeta 优化器下的 Loss 收敛曲线对比：
 
-- **Qwen3 Moe 实验对比**: [loss_comparison_20260507_101546.pdf](assets/loss_comparison_20260507_101546.pdf)
-- **Qwen3 1.7B 实验对比**: [loss_comparison_20260507_101803.pdf](assets/loss_comparison_20260507_101803.pdf)
-- **Qwen3 8B 实验对比**: [loss_comparison_20260507_101918.pdf](assets/loss_comparison_20260507_101918.pdf)
-- **Qwen3 0.6B 实验对比**: [loss_comparison_20260507_103023.pdf](assets/loss_comparison_20260507_103023.pdf)
+#### Qwen3 0.6B 实验对比
+![Qwen3 0.6B Loss](assets/qwen3-0.6b_page-0001.jpg)
 
-> **注**：在 GitHub/GitLab 等平台预览时，点击链接即可在线查看 PDF 详情。
+#### Qwen3 1.7B 实验对比
+![Qwen3 1.7B Loss](assets/qwen3-1.7b_page-0001.jpg)
+
+#### Qwen3 8B 实验对比
+![Qwen3 8B Loss](assets/qwen3-8b_page-0001.jpg)
+
+#### Qwen3 MoE 1.3B 实验对比
+![Qwen3 MoE 1.3B Loss](assets/qwen3-moe1.3b_page-0001.jpg)
+
+> **注**：详细的数值报告可参考 `assets/` 目录下的原始 PDF 文件。
 
 ## 3. 引用与支持
 如果您在研究中使用了 Zeta 优化器或 MindSpeed，请参考相关的技术文档。
