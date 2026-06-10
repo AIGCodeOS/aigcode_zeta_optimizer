@@ -1,4 +1,7 @@
 # Zeta Optimizer for Qwen3 Training (MindSpeed Integration)
+
+[English](README_en.md) | [中文](README.md)
+
 ## 1. 快速开始
 
 ### 脚本位置
@@ -19,9 +22,9 @@ bash examples/mcore/qwen3/pretrain_qwen3_0point6b_4K_ptd_zeta.sh <MASTER_PORT> <
 ### 性能表现总结
 | 模型规模 | 优化器 | 序列长度 | 训练步数 | 收敛增益 (对比 AdamW) |
 | :--- | :--- | :--- | :--- | :--- |
-| Qwen3 0.6B | Zeta | 4096 | 20,000 | ~15% Faster |
-| Qwen3 1.7B | Zeta | 4096 | 20,000 | ~12% Faster |
-| Qwen3 8B | Zeta | 4096 | 40,000 | TBD |
+| Qwen3 1.7B | Zeta | 4096 | 20,000 | 1.64x |
+| Qwen3 8B | Zeta | 4096 | 40,000 | 1.2x |
+| Qwen3 Moe | Zeta | 4096 | 20,000 | 1.32x |
 
 ### 实验结果可视化
 以下是不同规模 Qwen3 模型在 Zeta 优化器下的 Loss 收敛曲线对比：
